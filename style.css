@@ -1,0 +1,28 @@
+/* Home screen */
+.container{
+    padding: 0;
+}
+#frontpage{
+    background-image: url('./images/bg.gif');
+    background-size: cover;
+    height: 100vh;
+}
+img
+{
+    box-shadow: 0px 0px 5px #fff;
+    /* max-width: 400px; */
+    margin-top: 1em;
+    
+}
+#homebtn{
+    width: 60%;
+    border-radius: 50%;
+}
+@media only screen and (min-width: 450px){
+    img{
+        margin: auto;
+    }
+    #homebtn{
+        margin-bottom: 2em;
+    }
+}
