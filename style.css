@@ -1,21 +1,22 @@
-/* Home screen */
 .container{
     padding: 0;
+    overflow: hidden;
 }
+
+/* Home screen */
+
 #frontpage{
     background-image: url('./images/bg.gif');
     background-size: cover;
-    overflow: hidden;
     height: 100vh;
 }
-img
+#frontpageimg
 {
     box-shadow: 0px 0px 5px #fff;
     /* max-width: 400px; */
     margin-top: 1em;
-    
 }
-#homebtn{
+#frontpagebtn{
     width: 60%;
     border-radius: 50%;
 }
