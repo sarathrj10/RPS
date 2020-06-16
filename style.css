@@ -5,6 +5,7 @@
 #frontpage{
     background-image: url('./images/bg.gif');
     background-size: cover;
+    overflow: hidden;
     height: 100vh;
 }
 img
