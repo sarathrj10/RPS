@@ -9,7 +9,6 @@
 #frontpage{
     background-image: url('./images/bg.gif');
     background-size: cover;
-    height: 100vh;
 }
 #frontpageimg
 {
