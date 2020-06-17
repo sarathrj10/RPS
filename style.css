@@ -40,7 +40,7 @@
 #gamepage{
     background-image: url('./images/bg2.gif');
     background-size: cover;
-    height: 100vh;
+    height: 100%;
 }
 #rounds{
     box-shadow: 0px 0px 5px #fff;
@@ -111,8 +111,8 @@
 #gamerules{
     background-image: url('./images/bg2.gif');
     background-size: cover;
-    height: 100vh;
-  
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 .rules{
     margin-top: 1em;
@@ -123,7 +123,7 @@
 #selectrounds{
     font-size: 30px;
     font-weight: lighter;
-    text-decoration: underline;
+
 }
 .startgamebtn{
     margin: 0 auto;
