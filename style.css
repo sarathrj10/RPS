@@ -8,7 +8,8 @@
 #frontpage{
     background-image: url('./images/bg1.gif');
     background-size: cover;
-    height: 100vh;
+    height:100%;
+    
 }
 #frontpageimg
 {
@@ -38,7 +39,8 @@
 #gamepage{
     background-image: url('./images/bg2.gif');
     background-size: cover;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     height: 100%;
 }
 #rounds{
