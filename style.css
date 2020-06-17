@@ -1,20 +1,18 @@
-
 .container{
     width: 100%;
     padding: 0;
     overflow: hidden;   
 }
-/* Home screen */
+/* front page */
 
 #frontpage{
-    background-image: url('./images/bg.gif');
+    background-image: url('./images/bg1.gif');
     background-size: cover;
     height: 100vh;
 }
 #frontpageimg
 {
     box-shadow: 0px 0px 5px #fff;
-    /* max-width: 400px; */
     margin-top: 1em;
 }
 #frontpagebtn{
@@ -36,4 +34,55 @@
     }
 }
 
-
+/* Game page */
+#gamepage{
+    background-image: url('./images/bg2.gif');
+    background-size: cover;
+    flex-wrap: wrap;
+}
+#rounds{
+    box-shadow: 0px 0px 5px #fff;
+    border-radius: 20px;
+}
+/* scorecard */
+#scores{
+    color: white;
+    width: 89%;
+}
+.fa-user,.fa-robot{
+   color: white;
+}
+.scoreboard{
+    margin-top: 2em;
+    font-size: 25px;
+    text-align: left;
+}
+/* game area */
+.gamearea{
+    margin-top: 3em;
+}
+.gameimg{
+    width: 100%;
+}
+.vs{
+    margin: auto;
+    color:white;
+    font-size: 2.5em;
+}
+/* chooosing board */
+.choosingboard{
+    justify-content: center;
+    margin-top: 1em;
+}
+.choosingboardheading{
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 1em;
+}
+.chooseimg{
+    width: 100%;
+    display: block;
+}
+.chooselabel{
+    color:white;
+}
