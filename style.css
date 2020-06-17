@@ -47,16 +47,18 @@
 /* scorecard */
 #scores{
     color: white;
-    width: 89%;
+    width: 95%;
 }
 .fa-user,.fa-robot{
    color: white;
 }
 .scoreboard{
-    padding-bottom: 0;
     margin-top: 1em;
     font-size: 25px;
     text-align: left;
+}
+.scoreitems{
+    height: 40px;
 }
 /* game area */
 .gamearea{
