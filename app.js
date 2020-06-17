@@ -21,5 +21,5 @@ function playbtnclicked(){
     delay();
     console.log('hai')
 }
-document.getElementById('frontpage').style.display='none';
+document.getElementById('frontpage').style.display='block';
 document.getElementById('gamepage').style.display='block';
