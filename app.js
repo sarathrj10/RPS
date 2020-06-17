@@ -1,5 +1,5 @@
 //background music
-bgplay();
+
 // screen selector
 const frontscreen=document.getElementById('frontpage');
  const rulescreen=document.getElementById('gamerules');
@@ -23,6 +23,7 @@ sound.play();
 const playgamebtn=document.getElementById('frontpagebtn');
 playgamebtn.addEventListener('click',playbtnclicked);
 function playbtnclicked(){
+    bgplay();
     clicksound();
     setTimeout(function(){
         frontscreen.style.display='none';
