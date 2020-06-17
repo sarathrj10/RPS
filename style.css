@@ -8,13 +8,14 @@
 #frontpage{
     background-image: url('./images/bg1.gif');
     background-size: cover;
-    height:100%;
+    height:100vh;
     
 }
 #frontpageimg
 {
     box-shadow: 0px 0px 5px #fff;
     margin-top: 1em;
+    width: 100%;
 }
 #frontpagebtn{
     width: 60%;
@@ -39,9 +40,7 @@
 #gamepage{
     background-image: url('./images/bg2.gif');
     background-size: cover;
-    /* display: flex;
-    flex-wrap: wrap; */
-    height: 100%;
+    height: 100vh;
 }
 #rounds{
     box-shadow: 0px 0px 5px #fff;
@@ -107,4 +106,26 @@
 }
 .chooselabel{
     color:white;
+}
+/* game rules page */
+#gamerules{
+    background-image: url('./images/bg2.gif');
+    background-size: cover;
+    height: 100vh;
+  
+}
+.rules{
+    margin-top: 1em;
+    color: white;
+    text-align: left;
+    font-size: 23px;
+} 
+#selectrounds{
+    font-size: 30px;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+.startgamebtn{
+    margin: 0 auto;
+    width: 50%;
 }
