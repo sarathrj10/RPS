@@ -11,6 +11,7 @@
     <title>Rock,Paper,Scissors</title>
   </head>
   <body>
+    <!-- <audio src="./Audio/bgmusic.mp3" webkit-playsinline="true" playsinline="true" autoplay=''></audio> -->
     <div class="container bg-dark">
           <!--........ front page.............. -->
           <div class="row">
@@ -23,11 +24,47 @@
             </div>
           </div>
             <!-- front page ends -->
+            <!-- instruction page -->
+            <div class="row ">
+               <div class="col-md-6 mx-auto">
+                  <div class="card card-body text-center " id="gamerules">
+                    <h6 class="display-4 text-white " id="rounds">Game Rules</h6>
+                    <!-- game rules -->
+                    <div class="rules">
+                      <p>The outcome of the game is determined by 3 simple rules :</p>
+                      <ul>
+                        <li>Rock wins against scissors.</li>
+                        <li>Scissors win against paper.</li>
+                        <li>Paper wins against rock.</li>
+                        <li>Tied, if same entities comes.</li>
+                      </ul>
+                    </div>
+                    <!-- game rules ends here -->
+                    <!-- select rounds -->
+                    <h6 class="text-white " id="selectrounds">Set Rounds</h6>
+                    <div class="input-group-prepend mt-4">
+                      <span class="input-group-text" style="padding-right: 3em;">Name</span>
+                      <input type="number" class="form-control " id="emi-interest" placeholder="Enter your name">
+                  </div>
+                  <div class="input-group-prepend my-4">
+                    <span class="input-group-text">Set rounds</span>
+                    <select class="form-control" id="setrounds">
+                     
+                    </select>
+                </div>
+                 <div class="startgamebtn">
+                    <button class="btn btn-danger">Start Game</button>
+                    </div>
+                    <!-- select rounds end here -->
+                  </div>
+              </div>
+            </div>
+            <!-- instruction page ends here -->
             <!--...... game page......... -->
             <div class="row">
             <div class="col-md-6 mx-auto">
               <div class="card card-body text-center " id="gamepage">
-                  <h6 class="display-4 text-white " id="rounds">Round :<span id="roundno"> 1</span></h6>
+                  <h6 class="display-4 text-white" id="rounds">Round :<span id="roundno"> 1</span></h6>
                   <!-- score board -->
                  <div class="row  scoreboard">
                    <div class="col-4 scoreitems">
