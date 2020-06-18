@@ -153,4 +153,35 @@
     font-weight: lighter;
     font-size: 2rem;
     margin-top: 1em;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+/* game over page */
+#gameoverpage{
+    background-image: url('./images/gameover.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+#finalscore{
+    background: -webkit-linear-gradient(rgb(224, 203, 10), rgb(226, 97, 10));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1em;
+}
+#userfinal,#botfinal{
+    background: -webkit-linear-gradient(rgb(224, 203, 10), rgb(226, 97, 10));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5em;
 }
