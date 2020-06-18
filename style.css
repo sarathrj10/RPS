@@ -125,7 +125,7 @@
 #gamerules{
     background-image: url('./images/bg2.gif');
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     /* display: flex;
     flex-wrap: wrap; */
 }
