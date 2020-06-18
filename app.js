@@ -2,6 +2,8 @@
 let username='';
 let rounds;
 let count=1;
+let userscore=0;
+let botscore=0;
 
 
     
@@ -25,7 +27,7 @@ let sound=new Audio('./Audio/click.mp3');
 sound.play();
 }
 //front screen
-//set kistners to play button
+//set Listners to play button
 const playgamebtn=document.getElementById('frontpagebtn');
 playgamebtn.addEventListener('click',playbtnclicked);
 function playbtnclicked(){
@@ -54,6 +56,8 @@ function startgamebtnclicked(){
      username=document.getElementById('username').value;
      document.getElementById('userlabel').appendChild(document.createTextNode(username));
     document.getElementById('roundno').appendChild(document.createTextNode(count));
+    document.getElementById('userscore').appendChild(document.createTextNode(userscore));
+    document.getElementById('botscore').appendChild(document.createTextNode(botscore));
 }
 //game screen
 const choosingboard=document.getElementById('options');
@@ -63,7 +67,6 @@ function rungame(e){
     clicksound();
     let userchoice,botchoice,results,message;
     rounds=document.getElementById('setrounds').value;
-    for(var i=1;i<=rounds;i++){
     userchoice=e.target.id; 
     console.log(userchoice)
     botchoice=numberToChoice(randomTonum());
@@ -73,7 +76,19 @@ function rungame(e){
     message=finalMessage(results);
     console.log(message)
     rpsFrontEnd(userchoice,botchoice,message);
-    }
+    setTimeout(function(){
+        if(count<rounds){
+            document.getElementById('finalmsg').textContent='';
+            document.getElementById('compimg').src='';
+            document.getElementById('userimg').src='';
+            document.querySelector('.choosingboard').style.display='block';
+            count+=1;
+            document.getElementById('roundno').textContent='';
+            document.getElementById('roundno').appendChild(document.createTextNode(count));
+        }else{
+            alert('gameover')
+        }
+    },2000)   
 }
 function randomTonum(){
     return Math.floor(Math.random()*3);
@@ -93,11 +108,24 @@ function decideWinner(userchoice,botchoice){
     return[yourScore,compScore];
 }
 function finalMessage([yourScore,compScore]){
+
     if(yourScore === 0){
+        botscore=eval(botscore+1);
+        document.getElementById('botscore').textContent='';
+        document.getElementById('botscore').appendChild(document.createTextNode(botscore));
         return{'message':'Computer Scores!!','color':'red'};
     }else if(yourScore === .5){
+        botscore=eval(botscore+1);
+        userscore=eval(userscore+1);
+        document.getElementById('botscore').textContent='';
+        document.getElementById('userscore').textContent='';
+        document.getElementById('botscore').appendChild(document.createTextNode(botscore));
+        document.getElementById('userscore').appendChild(document.createTextNode(userscore));
         return{'message':'Scores Tied!!','color':'yellow'};
     }else{
+        userscore=eval(userscore+1);
+        document.getElementById('userscore').textContent='';
+        document.getElementById('userscore').appendChild(document.createTextNode(userscore));
         return{'message':'You Scores!!','color':'green'};
     }
 }
@@ -107,7 +135,7 @@ function rpsFrontEnd(userchoice,botchoice,message){
         'paper':document.getElementById('paper').src,
         'scissors':document.getElementById('scissors').src
     }
-    document.querySelector('.choosingboard').remove();
+    document.querySelector('.choosingboard').style.display='none';
     document.getElementById('userimg').setAttribute('src',`${imgDatabase[userchoice]}`);
     document.getElementById('compimg').setAttribute('src',`${imgDatabase[botchoice]}`);
     document.getElementById('finalmsg').setAttribute('style',`color:${message.color};`)
