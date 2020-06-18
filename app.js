@@ -80,13 +80,9 @@ function rungame(e){
     let userchoice,botchoice,results,message;
     rounds=document.getElementById('setrounds').value;
     userchoice=e.target.id; 
-    console.log(userchoice)
     botchoice=numberToChoice(randomTonum());
-    console.log(botchoice)
     results=decideWinner(userchoice,botchoice);
-    console.log(results)
     message=finalMessage(results);
-    console.log(message)
     rpsFrontEnd(userchoice,botchoice,message);
     setTimeout(function(){
         if(count<rounds){
@@ -181,11 +177,6 @@ function resultoutput(userscore,botscore){
       clicksound();
       window.location.reload(false); 
   });
-  const quit=document.getElementById('quitgame');
-  quit.addEventListener('click',function(){
-      clicksound()
-      window.close();
-  })
 }
 
 
