@@ -144,7 +144,7 @@
 }
 /* injected board */
 .injectedboard{
-    margin-top: 1em;
+    margin-top: 4em;
 }
 .lastmsg{
     margin: 0 auto;
@@ -152,4 +152,5 @@
 #finalmsg{
     font-weight: lighter;
     font-size: 2rem;
+    margin-top: 1em;
 }
