@@ -21,27 +21,13 @@
     width: 60%;
     border-radius: 50%;
 }
-@media only screen and (min-width: 450px){
-    
-    #frontpagebtn{
-        margin-bottom: 2em;
-    }
-    #frontpageimg{
-        max-width: 400px;
-        width: 100%;
-        margin: auto;
-    }
-    #fontpagetitle{
-        margin-bottom: 1em;
-    }
-}
 
 /* Game page */
 #gamepage{
     background-image: url('./images/bg2.gif');
     background-size: cover;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 100%;
 }
 #rounds{
     font-size: 25px;
@@ -121,6 +107,7 @@
 .chooselabel{
     color:white;
 }
+
 /* game rules page */
 #gamerules{
     background-image: url('./images/bg2.gif');
@@ -169,11 +156,12 @@
     }
   }
 /* game over page */
+
 #gameoverpage{
     background-image: url('./images/gameover.jpg');
+    background-size: cover;
     height: 100vh;
     background-position: center;
-    background-size: cover;
 }
 #finalscore{
     background: -webkit-linear-gradient(rgb(224, 203, 10), rgb(226, 97, 10));
@@ -201,3 +189,60 @@
       visibility: hidden;
     }
   }
+  @media only screen and (min-width: 450px){
+    #frontpagebtn{
+        margin-bottom: 2em;
+    }
+    #frontpageimg{
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+    }
+    #fontpagetitle{
+        margin-bottom: 1em;
+    }
+    #gamepage{
+        height: 100vh;
+    }
+    .gamearea{
+        width: 80%;
+        margin: 1.5em auto;
+    }
+    .scoreboard{
+        width: 80%;
+        margin: 1em auto;
+    }
+    .choosingboard{
+        width: 90%;
+        margin: auto;
+    }
+    .injectedboard{
+        width: 75%;
+        margin: 1em auto;
+    }
+    #gameoverpage{
+        height: 100%;
+    }
+    .info{
+        width: 75%;
+        margin: 1em auto;
+    }
+    .splitscore{
+        width: 70%;
+        margin: 1em auto;
+    }
+    .splitimg{
+        width: 50%;
+        margin: auto;
+    }
+    #playagain{
+        min-width: 120px;
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 770px){
+    .scoreboard{
+        width: 100%;
+        margin: 1em auto;
+    }
+}
