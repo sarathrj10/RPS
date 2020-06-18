@@ -28,7 +28,7 @@
             <div class="row ">
                <div class="col-md-6 mx-auto">
                   <div class="card card-body text-center " id="gamerules">
-                    <h6 class="display-4 text-white " id="rounds">Game Rules</h6>
+                    <h6 class="display-4 text-white " id="rounds1">Game Rules</h6>
                     <!-- game rules -->
                     <div class="rules">
                       <p>The outcome of the game is determined by 3 simple rules :</p>
@@ -64,11 +64,11 @@
             <div class="row">
             <div class="col-md-6 mx-auto">
               <div class="card card-body text-center " id="gamepage">
-                  <h6 class="display-4 text-white" id="rounds">Round :<span id="roundno"> 1</span></h6>
+                  <h6 class=" text-white" id="rounds">Round :<span id="roundno"> </span></h6>
                   <!-- score board -->
                  <div class="row  scoreboard">
                    <div class="col-4 scoreitems">
-                     <p id="scores">scores:</p>
+                     <p id="scores">scores</p>
                    </div>
                    <div class="col-4 scoreitems">
                     <i class="fas fa-user"></i>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="col-5">
                 <img src="./images/user.png" class="gameimg">
-                <label style="color: white;">User</label>
+                <label id="userlabel" style="color: white;"></label>
                 </div>
                 </div>
                 <!-- Game area ends here -->
@@ -99,20 +99,33 @@
                      <h3 class="choosingboardheading">Pick up your choice :</h3>
                     <div class="row" id="options">
                       <div class="col-4">
-                        <img src="./images/stone.png" class="chooseimg" >
-                        <label class="chooselabel">Stone</label>
+                        <img src="./images/stone.png" class="chooseimg" id="rock">
+                        <label class="chooselabel">Rock</label>
                       </div>
                       <div class="col-4">
-                        <img src="./images/paper.png" class="chooseimg">
+                        <img src="./images/paper.png" class="chooseimg" id="paper">
                         <label class="chooselabel">Paper</label>
                       </div>
                       <div class="col-4">
-                        <img src="./images/scissors.png" class="chooseimg">
+                        <img src="./images/scissors.png" class="chooseimg" id="scissors">
                         <label class="chooselabel">Scissors</label>
                       </div>
                        
                     </div>
                 </div>
+                <!-- injected board -->
+                <div class="row injectedboard">
+                  <div class="col-6">
+                    <img id="compimg" style="width: 100%;">
+                  </div>
+                  <div class="col-6">
+                    <img id="userimg"  style="width: 100%;">
+                  </div>
+                  <div class="row lastmsg">
+                  <h3 id="finalmsg"></h3>
+                </div>
+                </div>
+                <!-- injected board ends here -->
                  <!-- choosing board ends here -->
               </div>
               <!-- game page ends.... -->
