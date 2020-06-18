@@ -49,6 +49,9 @@
     box-shadow: 0px 0px 5px #fff;
     border-radius: 25px;  
 }
+#roundno{
+    margin-left: 10px;
+}
 #rounds1{
     box-shadow: 0px 0px 5px #fff;
     border-radius: 15px;   
@@ -57,6 +60,10 @@
 #scores{
     color: white;
      width: 100%;
+}
+#userscore,#botscore{
+    color: white;
+    margin-left: .5em;
 }
 .fa-user,.fa-robot{
    color: white;
