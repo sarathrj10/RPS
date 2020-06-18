@@ -125,6 +125,7 @@
 #gamerules{
     background-image: url('./images/bg2.gif');
     background-size: cover;
+    height: 100vh;
     /* display: flex;
     flex-wrap: wrap; */
 }
@@ -186,3 +187,17 @@
     -webkit-text-fill-color: transparent;
     font-size: 5em;
 }
+.imgdraw{
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
