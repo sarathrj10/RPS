@@ -113,8 +113,6 @@
     background-image: url('./images/bg2.gif');
     background-size: cover;
     height: 100%;
-    /* display: flex;
-    flex-wrap: wrap; */
 }
 .rules{
     margin-top: 1em;
@@ -237,7 +235,7 @@
     }
     #playagain{
         min-width: 120px;
-        width: 80%;
+        width: 50%;
     }
 }
 @media only screen and (min-width: 770px){
