@@ -42,6 +42,7 @@
                     <!-- game rules ends here -->
                     <!-- select rounds -->
                     <h6 class="text-white " id="selectrounds">Set Rounds</h6>
+                    <div class="info">
                     <div class="input-group-prepend mt-4">
                       <span class="input-group-text" style="padding-right: 3em;">Name</span>
                       <input type="text" class="form-control " id="username" placeholder="Enter your name">
@@ -52,6 +53,7 @@
                      
                     </select>
                 </div>
+                    </div>
                  <div class="startgamebtn">
                     <button class="btn btn-danger">Start Game</button>
                     </div>
@@ -133,10 +135,10 @@
               <!-- game page ends.... -->
               <!-- Gameover page -->
               <div class="row">
-                <div class="col-md-6 mx-auto">
+                <div class="col-12">
                   <div class="card card-body text-center" id="gameoverpage">
                      <h3 class="display-4" id="finalscore">Final Scores</h3>
-                     <div class="row">
+                     <div class="row splitscore">
                        <div class="col-6" id="userfinal">
                          <h4>You</h4>
                          <p id="finaluser"></p>
@@ -146,7 +148,9 @@
                         <p id="finalbot"></p>
                       </div>
                      </div>
+                     <div class="splitimg">
                      <img  id="imgdecide" style="width: 100%;">
+                     </div>
                      <div class="row">
                       <div class="col-6">
                        <button class="btn btn-success" id="playagain">PLAY AGAIN</button>
