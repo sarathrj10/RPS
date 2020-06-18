@@ -12,9 +12,11 @@ let botscore=0;
 const frontscreen=document.getElementById('frontpage');
  const rulescreen=document.getElementById('gamerules');
 const gamescreen=document.getElementById('gamepage');
+const gameoverscreen=document.getElementById('gameoverpage');
 //setting current front screen
  rulescreen.style.display='none';
  gamescreen.style.display='none';
+ gameoverscreen.style.display='none';
 //backgroung music
 function bgplay(){
     let bgsound=new Audio('./Audio/bgmusic.mp3');
@@ -86,9 +88,12 @@ function rungame(e){
             document.getElementById('roundno').textContent='';
             document.getElementById('roundno').appendChild(document.createTextNode(count));
         }else{
-            alert('gameover')
+            // alert('gameover')
+            gamescreen.style.display='none'
+            gameoverscreen.style.display='block';
+            resultoutput(userscore,botscore);
         }
-    },2000)   
+    },3000)   
 }
 function randomTonum(){
     return Math.floor(Math.random()*3);
@@ -141,6 +146,24 @@ function rpsFrontEnd(userchoice,botchoice,message){
     document.getElementById('finalmsg').setAttribute('style',`color:${message.color};`)
     document.getElementById('finalmsg').appendChild(document.createTextNode(`${message.message}`))
     console.log(document.getElementById('finalmsg'));
+
+}
+function resultoutput(userscore,botscore){
+    console.log(userscore)
+    if(userscore>botscore){
+        document.getElementById('imgdecide').setAttribute('src','./images/youwin.gif');
+        document.getElementById('imgdecide').setAttribute('style','width: 70%');
+    }else if(userscore<botscore){
+        document.getElementById('imgdecide').setAttribute('src','./images/youlose.gif');
+    }else{
+        document.getElementById('imgdecide').setAttribute('src','./images/draw.png');
+        document.getElementById('imgdecide').setAttribute('style','margin: 3em auto');
+        console.log(document.getElementById('imgdecide'))
+    }
+    document.getElementById('finaluser').textContent='';
+    document.getElementById('finaluser').textContent=userscore;
+    document.getElementById('finalbot').textContent='';
+    document.getElementById('finalbot').textContent=botscore;
 
 }
 
