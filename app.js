@@ -21,19 +21,29 @@ const gameoverscreen=document.getElementById('gameoverpage');
 function bgplay(){
     let bgsound=new Audio('./Audio/bgmusic.mp3');
     bgsound.loop = true;
-    bgsound.play();    
+    bgsound.play();   
+    }
+    //applause sound
+    function applause(){
+      let applo=new Audio('./Audio/applause.mp3')
+      applo.play();
     }
 //click sound function
 function clicksound(){
 let sound=new Audio('./Audio/click.mp3');
 sound.play();
 }
+//lose sound
+function losesound(){
+    let lose=new Audio('./Audio/lose.mp3');
+    lose.play();
+    }
 //front screen
 //set Listners to play button
 const playgamebtn=document.getElementById('frontpagebtn');
 playgamebtn.addEventListener('click',playbtnclicked);
 function playbtnclicked(){
-    // bgplay();
+    bgplay();
     clicksound();
     setTimeout(function(){
         frontscreen.style.display='none';
@@ -153,18 +163,29 @@ function resultoutput(userscore,botscore){
     if(userscore>botscore){
         document.getElementById('imgdecide').setAttribute('src','./images/youwin.gif');
         document.getElementById('imgdecide').setAttribute('style','width: 70%');
+        applause();
     }else if(userscore<botscore){
         document.getElementById('imgdecide').setAttribute('src','./images/youlose.gif');
+        losesound();
     }else{
         document.getElementById('imgdecide').setAttribute('src','./images/draw.png');
+        document.getElementById('imgdecide').className='imgdraw'
         document.getElementById('imgdecide').setAttribute('style','margin: 3em auto');
-        console.log(document.getElementById('imgdecide'))
     }
     document.getElementById('finaluser').textContent='';
     document.getElementById('finaluser').textContent=userscore;
     document.getElementById('finalbot').textContent='';
     document.getElementById('finalbot').textContent=botscore;
-
+  const replay=document.getElementById('playagain');
+  replay.addEventListener('click',function(){
+      clicksound();
+      window.location.reload(false); 
+  });
+  const quit=document.getElementById('quitgame');
+  quit.addEventListener('click',function(){
+      clicksound()
+      window.close();
+  })
 }
 
 
